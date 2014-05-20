@@ -4,8 +4,8 @@ This repository includes mostly various *rc and conf files of my linux/dwm
 set up. Just clone this repo and run 
 
     $ cd dot-files
-		$ stow bash
-		$ stow vim
+    $ stow bash
+    $ stow vim
 
 to install, for example, the bashrcs and .vim files into your 
 
