@@ -1,0 +1,15 @@
+keycode 67 = F1
+keycode 68 = F2 
+keycode 69 = F3
+keycode 70 = F4
+keycode 71 = F5
+keycode 72 = F6
+keycode 73 = F7
+keycode 74 = F8
+keycode 75 = F9
+keycode 76 = F10
+keycode 95 = F11
+keycode 96 = F12
+
+keycode 187	= parenleft
+keycode	188	= parenright

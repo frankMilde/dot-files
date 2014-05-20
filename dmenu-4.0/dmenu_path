@@ -1,0 +1,29 @@
+#!/bin/sh
+CACHE=$HOME/.dmenu_cache
+IFS=:
+#rm -f $HOME/.dmenu_cache
+
+
+uptodate() {
+	test -f "$CACHE" &&
+	for dir in $PATH
+	do
+		test ! $dir -nt "$CACHE" || return 1
+	done
+}
+
+if ! uptodate
+then
+	for dir in $PATH
+	do
+		cd "$dir" &&
+		for file in *
+		do
+			test -x "$file" && test "$file" != "opera" && test "$file" != "chromium-browser" && test "$file" != "chromium" && test "$file" != "konqueror" && echo "$file"
+			#test -x "$file" && echo "$file"
+		done
+	done | sort | uniq > "$CACHE".$$ &&
+	mv "$CACHE".$$ "$CACHE"
+fi
+
+cat "$CACHE"

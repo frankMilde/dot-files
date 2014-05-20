@@ -1,0 +1,507 @@
+
+[inpSearch]
+0=8#n8 S+#S+ S+#S+
+1=vlindex
+
+[inp Select ]
+0=*.*
+1=.*
+2=*
+
+[inp Shell link to machine ]
+0=tino@rosa.physik.tu-berlin.de
+1=muschibaer
+2=arendt
+
+[inp Save As ]
+0=vimrc
+1=kostenstelle.html
+2=assis
+
+[edit-search]
+0=occupation
+1=raumplan
+2=demokrit
+
+[inp Auswahl ]
+0=*
+
+[inp Deselektieren ]
+0=*
+
+[inpLegt ein neues Verzeichnis an]
+0=workingcopies
+1=steves_draft2
+2=pics
+3=GG
+4=pics2
+5=merge
+6=merge_g
+7=merge_gg
+8=TPIWS2007_Stark
+9=TPI_07
+10=02
+11=VL
+12=test
+13=11
+14=12
+15=marten
+16=submitPRB_301007
+17=photos
+18=conferences
+19=noeks08
+20=20_2_8
+21=rwa_test
+22=TPIII08
+23=zettel
+24=klausur
+25=01
+26=03
+27=04
+28=05
+29=06
+30=07
+31=08
+32=09
+33=10
+34=SS_05
+35=tp03
+36=SS_07
+37=WS_0708
+38=mechanik
+39=stefan
+40=publications
+41=promotionsbetreuung
+42=downloads
+
+[Search]
+0=500000
+1=1200000
+2=1100000
+3=11000000
+4=10000000
+5=9000000
+6=10000
+7=100000
+8=1000000
+9=200000
+10=600000
+11=900000
+12=999999
+13=10.00000
+14=1e+7
+15=1e+07
+16=2e+07
+17=2e+06
+18=2.000001e+06
+19=10e+06
+20=238
+21=womu
+22=hellwig
+23=scherz
+24=bor
+25=muschik
+26=Muschik
+27=born
+
+[inp Unselect ]
+0=*
+
+[user-fmt-input]
+0=half type name | size | perm
+
+[mini-input]
+0=half type name | size | perm
+
+[inpCreate a new Directory]
+0=main
+1=gnometemp
+2=pps
+3=presentation
+4=biospek
+5=webstuff
+6=sono
+7=numeric
+8=0.005
+9=0.01
+10=0.02
+11=0.05
+12=0.001
+13=.Spam
+14=.root
+15=TEMP
+16=mar8
+17=backup
+18=CNT
+19=markov_0.001
+20=markov_0.01
+21=markov_0.1
+22=markov_1
+23=dummy
+24=diplom
+25=old_stuff
+26=Musik
+27=pub
+28=knorr_VL
+29=scherz_VL
+30=analytic
+31=src
+32=carsten
+33=phdstuff
+34=A_Research
+35=svn
+36=stefans_data
+37=carmichael
+38=TP4_08
+39=klausur
+40=01
+41=02
+42=03
+43=04
+44=05
+45=06
+46=08
+47=07
+48=09
+49=10
+50=11
+51=copy
+52=r46
+53=figures
+54=preface
+55=temp
+56=r66
+57=VL
+58=zettel
+59=ueb1
+
+[mc.shared.search]
+0=home/frank/.gnome2/panel2.d/default/launchers/curly-00e065e888-1.desktop' 
+
+[inp:fishlink_cmd: Shell link to machine ]
+0=uyen@hobbes.physik.tu-berlin.de
+
+[:unselect_cmd: Unselect ]
+0=
+
+[inpmc.fm.panel-filter]
+0=*
+
+[inpmc.ext.parameter]
+0=
+
+[:select_cmd: Select ]
+0=*.*
+
+[inpmc.fm.mkdir]
+0=submit
+1=theory
+2=bandstructure
+3=conBand
+4=valBand
+5=2011_teubnerBuch
+6=con
+7=dataTreffen
+8=2011_07_22_talk
+9=backup
+10=2011_07_22
+11=2011_07_22_kxky_AbsorpRabiWorking
+12=coding
+13=qw
+14=newAlexScheme
+15=resubmit
+16=qm
+17=ed
+18=td
+19=qft
+20=inital
+21=all
+22=qoptik
+23=bilder
+24=mechanik
+25=Desktop
+26=mieterselbstauskunft
+27=bewerbungsmappe
+28=data
+29=frank
+30=2010_11_BMBF_solarzellen
+31=farewell
+32=2009_Marten
+33=2011_Carsten
+34=heterostrucutres
+35=Tigran Hamasyan - A Fable (2011)
+36=research
+37=2011_Steinbach_Phononen
+38=2011_11_03_testEfield
+39=shaker
+40=stay
+41=material
+42=asolar
+43=buch
+44=notes
+45=publication
+46=papers
+47=includes
+48=kosten
+49=2011_01_13_2ndBornPhonon
+50=figures
+51=src
+52=include
+53=2012_02_01_memKernel
+54=2012_02_06_version2
+55=2012_01_07_version1
+56=envelope
+57=2012_02_10_version4Frank
+58=2012_02_15_version5B4AndKorr
+59=2012_02_16_version6AndKorrNatStyle
+
+[input-def]
+0=*
+
+[input2]
+0=/home/frank3/num/djcam/stay/
+1=/home/frank/research/bachelor/2011_Steinbach_Phononen/material/
+2=/media/usbb1/asolar/
+3=/media/usbb1/buch/
+4=/media/usbb1/
+5=/home/frank/research/bachelor/2011_Steinbach_Phononen/notes/
+6=/home/frank/buch/includes/
+7=/media/usbb1/Privat/bilder/Print_Dez/
+8=2011_12_19_verzichtAufEinrede.tex
+9=/home/frank/private/arbeit/
+10=brief_ba_6Jul10.tex
+11=/home/frank/private/wohnung/kosten/
+12=/home/frank/workingcopies/collapseRevival/publication/figures/2011_01_12_zweiteDatenAlex/results2.svg
+13=/home/frank/workingcopies/collapseRevival/publication/figures/2011_01_10_ersteDatenAlex/results.svg
+14=/home/frank/workingcopies/collapseRevival/publication/figures/2011_01_12_zweiteDatenAlex/envelope.sh
+15=/home/frank/workingcopies/collapseRevival/publication/figures/2011_01_13_2ndBornPhonon/
+16=/home/frank/workingcopies/collapseRevival/publication/figures/2011_01_13_2ndBornPhonon/data/rawdata/2ndBorn.gnu
+17=/home/frank/workingcopies/collapseRevival/publication/figures/2011_01_13_2ndBornPhonon/data/rawdata/2pn_4K.time
+18=/home/frank/workingcopies/collapseRevival/publication/figures/2011_01_13_2ndBornPhonon/data/rawdata/2pn_120K.time
+19=/home/frank/workingcopies/collapseRevival/publication/figures/2011_01_13_2ndBornPhonon/data/rawdata/2pn_300K.time
+20=/home/frank/workingcopies/collapseRevival/publication/figures/2011_01_13_2ndBornPhonon/data/rawdata/2pn_50K.time
+21=/home/frank/documents/viCheetSheet/viCS.tex
+22=/home/frank/workingcopies/collapseRevival/publication/
+23=/home/frank/test/promFormulare/
+24=/home/frank/buch/
+25=/home/frank/test/main.bib
+26=/home/frank/test/main.tex
+27=/home/frank/test/
+28=/home/frank/test/figures/
+29=/home/frank2/research/
+30=/home/frank/documents/toBeRemoved/
+31=/home/frank/alex/Makefile.new
+32=/home/frank/research/publications/2011_teubnerBuch/frank/thermo/
+33=/home/frank/research/currentProjects/2012_01_25_Commutator/code/src/
+34=/home/frank/research/currentProjects/2012_01_25_Commutator/code/include/
+35=/home/frank/research/currentProjects/2012_01_25_Commutator/
+36=/home/frank/research/currentProjects/2012_01_25_Commutator/include/
+37=/home/frank/local/dwm-6.0/
+38=/home/frank/research/currentProjects/2012_01_25_Commutator/mathematica/
+39=/home/frank/research/currentProjects/2012_01_25_Commutator/code/
+40=/home/frank/workingcopies/collapseRevival/publication/figures/2012_02_01_pureDephase/
+41=/home/frank/alex/figures/2012_01_12_zweiteDatenAlex/
+42=/home/frank/workingcopies/collapseRevival/publication/figures/2012_02_01_memKernel/
+43=/home/frank/alex/figures/2012_02_01_memKernel/
+44=/home/frank/workingcopies/collapseRevival/publication/2012_02_06_version2/
+45=/home/frank/workingcopies/collapseRevival/publication/2012_01_07_version1/
+46=/home/frank/workingcopies/collapseRevival/publication/figures/
+47=/home/frank/documents/shell_skript/envelope/
+48=/home/frank/workingcopies/collapseRevival/publication/2012_02_09_version3Alex/
+49=/home/frank/workingcopies/collapseRevival/publication/2012_02_10_version4Frank/
+50=/home/frank/documents/
+51=/home/frank/open/alex/
+52=/home/frank/documents/thesises/ba/thorben_kaul_BA.pdf
+53=/home/frank/research/currentProjects/2012_01_01_Alex/
+54=/home/frank/research/currentProjects/2012_01_01_Alex/publication/2012_02_15_version5B4AndKorr/
+55=/home/frank/research/currentProjects/2012_01_01_Alex/publication/2012_02_16_version6AndKorrNatStyle/
+56=/home/frank/Downloads/texcount/
+57=/home/frank/documents/shell_skript/
+58=/home/frank/research/currentProjects/2012_01_01_Alex/publication/2012_02_16_version6AndKorrPRLStyle/
+59=/home/frank/alex/
+
+[Dir Hist New Right Panel]
+0=/home/frank/.Trash
+1=/home/frank/research/finishedProjects/2010_Dissertation/revisedPhdthesis
+2=/home/frank/research/finishedProjects/2010_Dissertation
+3=/home/frank/research/finishedProjects
+4=/home/frank/alex
+5=/home/frank/condor_logs
+6=/home/frank/documents/shell_skript
+7=/home/frank/documents/toBeRemoved
+8=/home/frank/documents
+9=/home/frank/buch
+10=/home/frank/research/publications/2011_teubnerBuch/frank/thermo
+11=/home/frank/research/currentProjects/2012_01_25_Commutator/code/include
+12=/home/frank/research/currentProjects/2012_01_25_Commutator/code/src
+13=/home/frank/research/currentProjects/2012_01_25_Commutator/code
+14=/home/frank/local/dwm-6.0
+15=/home/frank/local/dwm-5.7.2
+16=/home/frank/local
+17=/home/frank/research/currentProjects/2012_01_25_Commutator/mathematica
+18=/home/frank/research/currentProjects/2012_01_25_Commutator
+19=/home/frank/.vim
+20=/home/frank/workingcopies/collapseRevival/publication/figures/2012_01_12_zweiteDatenAlex
+21=/home/frank/workingcopies/collapseRevival/publication/figures/2012_02_01_pureDephase
+22=/home/frank/workingcopies/collapseRevival/publication/2012_02_06_version2
+23=/home/frank/workingcopies/collapseRevival/publication/2012_01_07_version1
+24=/home/frank/workingcopies/collapseRevival/publication/figures/2012_01_10_ersteDatenAlex
+25=/home/frank/workingcopies/collapseRevival/publication/figures
+26=/home/frank/workingcopies/collapseRevival/publication/figures/2012_01_13_2ndBornPhonon
+27=/home/frank/workingcopies/collapseRevival/publication/2012_02_10_version4Frank
+28=/home/frank/workingcopies/collapseRevival/publication
+29=/home/frank/workingcopies/collapseRevival
+30=/home/frank/workingcopies
+31=/home/frank/open/alex
+32=/home/frank/open
+33=/home/frank
+34=/home/frank/research
+35=/home/frank/research/currentProjects
+36=/home/frank/research/currentProjects/2012_01_01_Alex/papers
+37=/home/frank/research/currentProjects/2012_01_01_Alex
+38=/home/frank/research/currentProjects/2012_01_01_Alex/publication/figures/2012_01_10_ersteDatenAlex
+39=/home/frank/research/currentProjects/2012_01_01_Alex/publication/figures/2012_01_12_zweiteDatenAlex
+40=/home/frank/research/currentProjects/2012_01_01_Alex/publication/figures/2012_01_13_2ndBornPhonon/data/rawdata
+41=/home/frank/research/currentProjects/2012_01_01_Alex/publication/figures/2012_01_13_2ndBornPhonon/data
+42=/home/frank/research/currentProjects/2012_01_01_Alex/publication/figures/2012_01_13_2ndBornPhonon/include
+43=/home/frank/research/currentProjects/2012_01_01_Alex/publication/figures/2012_01_13_2ndBornPhonon/src
+44=/home/frank/research/currentProjects/2012_01_01_Alex/publication/figures/2012_01_13_2ndBornPhonon
+45=/home/frank/research/currentProjects/2012_01_01_Alex/publication/figures/2012_02_01_memKernel/data/Fourier
+46=/home/frank/research/currentProjects/2012_01_01_Alex/publication/figures/2012_02_01_memKernel/data
+47=/home/frank/research/currentProjects/2012_01_01_Alex/publication/figures/2012_02_01_memKernel/include
+48=/home/frank/research/currentProjects/2012_01_01_Alex/publication/figures/2012_02_01_memKernel/src
+49=/home/frank/research/currentProjects/2012_01_01_Alex/publication/figures/2012_02_01_memKernel
+50=/home/frank/research/currentProjects/2012_01_01_Alex/publication/figures/2012_02_01_pureDephase
+51=/home/frank/research/currentProjects/2012_01_01_Alex/publication/figures
+52=/home/frank/research/currentProjects/2012_01_01_Alex/publication/2012_02_10_version4Frank
+53=/home/frank/research/currentProjects/2012_01_01_Alex/publication/2012_02_09_version3Alex
+54=/home/frank/research/currentProjects/2012_01_01_Alex/publication/2012_02_06_version2
+55=/home/frank/research/currentProjects/2012_01_01_Alex/publication/2012_01_20_sentToAlex
+56=/home/frank/research/currentProjects/2012_01_01_Alex/publication/2012_01_07_version1
+57=/home/frank/research/currentProjects/2012_01_01_Alex/publication/2012_02_15_version5B4AndKorr
+58=/home/frank/research/currentProjects/2012_01_01_Alex/publication
+59=/home/frank/research/currentProjects/2012_01_01_Alex/publication/2012_02_16_version6AndKorrNatStyle
+
+[cmdline]
+0=latex sono_presentation.tex
+1=cd var
+2=dvipdf loes1.dvi
+3=cd ?
+4=cd 
+5=cd path
+6=cd A_Research
+7=cd Desktop
+8=mkdir klausur
+9=cd A
+10=O
+11=:q
+12=cd ~
+13=mkdir oldvim
+14=find -name compiler.vim
+15=cd .vim
+16=signature1.html signature1.html 
+17=exit
+18=cd sh
+19=acroread klausur.pdf
+20=cd dionysos
+21=mkdir test
+22=cd PRivate
+23=cd Private
+24=cd /media/usb1
+25=cd home
+26=[5~
+27=OBOA
+28=spiegel.de
+29=mv ota.pdf otaCombi.pdf
+30=mv ota.svg otaCombi.svg
+31=[A
+32=`
+33=[23~
+34=[21~
+35=cd ermin/Temp
+36=OC
+37=unrar -e 
+38=unrar QuanElectr3.rar
+39=45[5~
+40=OA
+41=cd lehre
+42=mkdir backup
+43=umount /media/usb1
+44=mount
+45=OB
+46=e
+47=acroread frankSchufa.pdf
+48=mount /media/usb1
+49='
+50=3
+51=cd .thunderbird
+52=cd ..
+53=cd frank3
+54=cd .Trash
+55=cd frank2
+56=mkdir code
+57=mkdir mathematica
+58=cd
+59=
+
+[Dir Hist New Left Panel]
+0=/home/frank/research/unfinishedProjects/2009_pathIntegrals/numerics/2009_02_18_twolevelPhotonPhonon/functional/data/Fourier
+1=/home/frank/research/unfinishedProjects/2009_pathIntegrals/numerics/2009_02_18_twolevelPhotonPhonon/functional/data/gamma
+2=/home/frank/research/unfinishedProjects/2009_pathIntegrals/numerics/2009_02_18_twolevelPhotonPhonon/functional/data/renormalized
+3=/home/frank/research/unfinishedProjects/2009_pathIntegrals/numerics/2009_02_18_twolevelPhotonPhonon/functional/data/transmission
+4=/home/frank/research/unfinishedProjects/2009_pathIntegrals/numerics/2009_02_18_twolevelPhotonPhonon/functional/include
+5=/home/frank/research/unfinishedProjects/2009_pathIntegrals/numerics/2009_02_18_twolevelPhotonPhonon/functional/src
+6=/home/frank/research/unfinishedProjects/2009_pathIntegrals/numerics/2009_02_18_twolevelPhotonPhonon/functional/data
+7=/home/frank/research/unfinishedProjects/2009_pathIntegrals/numerics/2009_02_18_twolevelPhotonPhonon/functional
+8=/home/frank/documents/thesises/phD
+9=/home/frank/documents/thesises
+10=/home/frank/documents/agKnorrPapers
+11=/home/frank/documents
+12=/home/frank/research/publications/2011_JahnkeBuchartikel
+13=/home/frank/alex/2012_02_06_version2
+14=/home/frank/alex
+15=/home/frank/workingcopies/collapseRevival/publication/figures/2012_02_01_pureDephase
+16=/home/frank/workingcopies/collapseRevival/papers
+17=/home/frank/workingcopies/collapseRevival/publication/2012_01_07_version1
+18=/home/frank/workingcopies/collapseRevival/publication/2012_01_20_sentToAlex
+19=/home/frank/workingcopies/collapseRevival/publication/2012_02_06_version2
+20=/home/frank/workingcopies/collapseRevival/publication/2012_02_09_version3Alex
+21=/home/frank/workingcopies/collapseRevival/publication/2012_02_10_version4Frank
+22=/home/frank/workingcopies/collapseRevival/publication/figures/2012_01_10_ersteDatenAlex
+23=/home/frank/workingcopies/collapseRevival/publication/figures/2012_01_12_zweiteDatenAlex
+24=/home/frank/workingcopies/collapseRevival/publication/figures/2012_01_13_2ndBornPhonon/data/rawdata
+25=/home/frank/workingcopies/collapseRevival/publication/figures/2012_01_13_2ndBornPhonon/data
+26=/home/frank/workingcopies/collapseRevival/publication/figures/2012_01_13_2ndBornPhonon/include
+27=/home/frank/workingcopies/collapseRevival/publication/figures/2012_01_13_2ndBornPhonon/src
+28=/home/frank/workingcopies/collapseRevival/publication/figures/2012_01_13_2ndBornPhonon
+29=/home/frank/workingcopies/collapseRevival/publication/figures/2012_02_01_memKernel/data
+30=/home/frank/workingcopies/collapseRevival/publication/figures/2012_02_01_memKernel/include
+31=/home/frank/workingcopies/collapseRevival/publication/figures/2012_02_01_memKernel/src/.svn/prop-base
+32=/home/frank/workingcopies/collapseRevival/publication/figures/2012_02_01_memKernel/src/.svn
+33=/home/frank/workingcopies/collapseRevival/publication/figures/2012_02_01_memKernel/src
+34=/home/frank/workingcopies/collapseRevival/publication/figures/2012_02_01_memKernel
+35=/home/frank/workingcopies/collapseRevival/publication/figures
+36=/home/frank/workingcopies/collapseRevival/publication
+37=/home/frank/workingcopies/collapseRevival
+38=/home/frank/workingcopies
+39=/home/frank
+40=/home/frank/open
+41=/home/frank/open/alex
+42=/home/frank/research/finishedProjects/2010_11_11_phononCavityFeeding_Hughes/notes
+43=/home/frank/research/finishedProjects/2010_11_11_phononCavityFeeding_Hughes/publication
+44=/home/frank/research/publications/2011_PRB/2010_11_18_PhononsDraftV2
+45=/home/frank/research/publications/2011_PRB
+46=/home/frank/research/publications/2011_teubnerBuch
+47=/home/frank/research/publications/pdfs
+48=/home/frank/research/publications
+49=/home/frank/research/proposals
+50=/home/frank/research/posters
+51=/home/frank/research/papers
+52=/home/frank/research/ideas
+53=/home/frank/research/currentProjects
+54=/home/frank/research
+55=/home/frank/research/finishedProjects/2009_2010_BixCascade_Alex/papers
+56=/home/frank/research/finishedProjects/2009_2010_BixCascade_Alex
+57=/home/frank/research/finishedProjects/2010_11_11_phononCavityFeeding_Hughes/papers
+58=/home/frank/research/finishedProjects/2010_11_11_phononCavityFeeding_Hughes
+59=/home/frank/research/finishedProjects

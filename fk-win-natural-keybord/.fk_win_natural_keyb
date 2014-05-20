@@ -1,0 +1,16 @@
+keycode 146	=	F1
+keycode 139 = F2 
+keycode 190 = F3
+keycode 189 = F4
+keycode 142 = F5
+keycode 214 = F6
+keycode 240 = F7
+keycode 241 = F8
+keycode 239 = F9
+keycode 242 = F10
+keycode 218 = F12
+
+keycode 187	= parenleft
+keycode	188	= parenright
+
+keycode 133 = Super_L

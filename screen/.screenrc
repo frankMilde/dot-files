@@ -1,0 +1,75 @@
+.screenrc
+
+term = screen-256color
+#term = uxterm-256color
+
+# scroll back buffer
+defscrollback 5000
+
+#altscreen on
+
+screen -t [music] 4
+screen -t [config] 3
+screen -t [compare] 2
+screen -t [compile] 1	 
+screen -t [code] 0	
+#split 
+#focus
+#resize -20
+#focus
+
+#screen -t [alex] 3	vi workingcopies/collapseRevival/publication/main.tex 
+#screen -t [buch] 2	vi buch/thermodynamik.tex 
+#screen -t [solar] 3	vi aSolar/notes/solar.tex 
+
+#"#5f00ff" dark
+#"#875fff" light
+
+#change the hardstatus settings to give an window list at the bottom of the
+#screen, with the time and date and with the current window highlighted
+hardstatus alwayslastline
+hardstatus string '%{= BW }[ %{W}%H %{W}][%= %{=kw}%?%-Lw%?%{R}(%{W}%n*%f%t%?(%u)%?%{R})%{w}%?%+Lw%?%?%= %{W}][%{k} %D %d %M %{W}%c        %{W}]'
+#hardstatus string '%{= kG }[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %D %d %M %{W}%c %{g}]'
+#hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+
+#caption always "%{kB}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{kB}%?%+Lw%?"
+
+activity "Activity in %t (%n)"
+
+altscreen on
+
+#map default modifier ctrl-a to ctrl-z
+escape ^za
+
+vbell off
+vbell_msg "Bell on %t (%n)"
+
+# for ctrl right and left arrows
+ bindkey ^[[1;5D prev
+ bindkey ^[[1;5C next
+
+# Alt+F1-5 get you to screen 1-5
+bindkey ^[[1;3P select 1
+bindkey ^[[1;3Q select 2
+bindkey ^[[1;3R select 3
+bindkey ^[[1;3S select 4
+bindkey ^[[15;3~ select 5
+
+# winKey+F1-5 get you to screen 1-5
+#bindkey ^[OP select 1
+#bindkey ^[OQ select 2
+#bindkey ^[OR select 3
+#bindkey ^[OS select 4
+#bindkey ^[[15~ select 5
+
+
+# ctrl+F5 and F6
+bindkey ^[[17;5~ screen
+bindkey ^[[18;5~ title
+
+# Note: to find out what certain key combinations produce use the 
+# cat >/dev/null/
+# command and try them out. 
+
+#bindkey -k k9 title
+#bindkey -k k5 screen

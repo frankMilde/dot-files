@@ -1,0 +1,14 @@
+keycode 245	=	F1
+keycode 135 = F2 
+keycode 138 = F3
+keycode 137 = F4
+keycode 191	=	F5
+keycode 175	=	F6
+keycode 228	= F7
+keycode 142 = F8
+keycode 218 = F9
+keycode 213 = F10
+keycode 185 = F12
+
+keycode 187	= parenleft
+keycode	188	= parenright
