@@ -36,11 +36,12 @@ tags
 *.parameter
 *.parameters
 
-###########
-# backups #
-###########
+#########################
+# backups and tempfiles #
+#########################
 *.old
 *.bak
+*.swp
 
 ######################
 # Logs and databases #

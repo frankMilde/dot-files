@@ -504,6 +504,8 @@ imap OE Ö
 imap ue ü
 imap UE Ü
 imap \ss ß
+imap LTD Ladungsträgerdynamik
+imap SZS Solarzellenstruktur
 
 " Common command line typos
 cmap Q q

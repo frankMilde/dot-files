@@ -180,6 +180,7 @@ alias links='echo -e you should fuckin work'
 alias lynx='echo -e you should fuckin work'
 alias chrome='echo -e you should fuckin work'
 alias git=hub
+alias stow='stow -v'
 alias sgit=smartgithg.sh
 alias qute="./local/stow/Qute/Qute"
 #alias top='atop'
