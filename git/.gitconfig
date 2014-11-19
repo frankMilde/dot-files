@@ -1,11 +1,11 @@
 [user]
-	name = Frank Milde
+	name  = Frank Milde
 	email = Frank.Milde@posteo.de
 [core]
 	autocrlf = input
 	safecrlf = true
-	editor = vim
-	excludesfile = /home/frank/.gitignore_global
+	editor   = vim
+	excludesfile = ~/.gitignore_global
 [credential]
 	helper = cache --timeout=3600
 [merge]

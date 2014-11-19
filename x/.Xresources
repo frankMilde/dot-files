@@ -37,6 +37,16 @@ xterm*multiClickTime: 250
 ! termtype
 UXTerm*termName: xterm-256color
 
+st*antialias: true
+st*faceName: Menlo-Powerline	
+st*faceSize: 9	
+st*internalBorder: 3
+st*loginShell: true
+st*scrollBar: false
+st*scrollKey: true
+st*saveLines: 1000
+st*multiClickTime: 250 
+
 ! Colours ----------------------------------
 !-------------------------------------------
 
