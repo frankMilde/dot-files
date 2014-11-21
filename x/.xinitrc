@@ -1,7 +1,6 @@
 #!/bin/bash
 
 xsetroot -solid black
-#xsetroot -solid gray30 &
 
 setxkbmap -model pc105 -layout us
 xmodmap ~/.fk_win_natural_keyb
@@ -14,10 +13,9 @@ xmodmap -e "keycode 66 = Escape"
 #gpg-agent --daemon --enable-ssh-support \
 #	--write-env-file "${HOME}/.gnupg/.gpg-agent-info"
 
-${HOME}/local/bin/st
+${HOME}/local/bin/st &
 firefox &
 thunderbird &
-#sleep 1 && evince &
 
 volume(){
      # STATUS="`amixer get Headphone |awk '/Front\ Left:/ {print $4}'`"
@@ -44,17 +42,6 @@ cmusstats(){
 
 xset b 0 440 50 &  beep off
 
-#if /usr/bin/screen -ls | grep -q Main; then
-#	${HOME}/local/bin/st -e screen -Uxr Main &
-#else
-#	${HOME}/local/bin/st -e screen -US Main &
-#fi
-
-#original dwm
-#while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
-
-#Franks
-#while xsetroot -name "`cmusstats``volume``date '+%A, %d. %b %Y   %H:%M'`"
 while xsetroot -name "`cmusstats``volume``date '+%A, %d. %b %Y   %H:%M'`"
 do
 	sleep 1
