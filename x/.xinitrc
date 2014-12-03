@@ -2,24 +2,23 @@
 
 xsetroot -solid black
 
-#setxkbmap -model pc105 -layout us
-setxkbmap -layout us
-#xmodmap ~/.fk_win_natural_keyb
+setxkbmap -model pc105 -layout us
+#setxkbmap -layout us
+xmodmap ~/.fk_win_natural_keyb
 
 #turns CAPSLOCK off and lets it act as ESC
 xmodmap -e "clear lock"
 xmodmap -e "keycode 66 = Escape"
 #xmodmap -e "keycode 0x42 = Escape" 
 
-#gpg-agent --daemon --enable-ssh-support \
-#	--write-env-file "${HOME}/.gnupg/.gpg-agent-info"
+gpg-agent --daemon --enable-ssh-support  --exit-with-session \
+	--write-env-file "${HOME}/.gnupg/.gpg-agent-info"
 
 ${HOME}/local/bin/st &
 firefox &
-thunderbird &
+exec ${HOME}/${USER}/local/bin/use-thunderbird-with-gpg-agent.sh &
 
-wifi()
-{
+wifi() {
     STATUS="X`/sbin/iwgetid`"
     if test "$STATUS" != "X" ; then
         ESSID="`/sbin/iwgetid |awk -F ":" '{print $2}'|sed -e 's/"//g'`"
@@ -73,7 +72,8 @@ cmusstats(){
 
 xset b 0 440 50 &  beep off
 
-while xsetroot -name "`cmusstats``volume``wifi``batt` `date '+%A, %d. %b %Y   %H:%M'`"
+#while xsetroot -name "`cmusstats``volume``wifi``batt` `date '+%A, %d. %b %Y   %H:%M'`"
+while xsetroot -name "`cmusstats``volume` `date '+%A, %d. %b %Y   %H:%M'`"
 do
 	sleep 1
 done &
