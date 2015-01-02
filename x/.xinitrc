@@ -16,13 +16,13 @@ xmodmap -e "keycode 66 = Escape"
 
 ${HOME}/local/bin/st &
 firefox &
-thunderbird &
+#thunderbird &
 
-wifi()
-{
-    STATUS="X`/sbin/iwgetid`"
-    if test "$STATUS" != "X" ; then
-        ESSID="`/sbin/iwgetid |awk -F ":" '{print $2}'|sed -e 's/"//g'`"
+wifi() {
+    #STATUS="X`/sbin/iwgetid`"
+    ESSID="`iwconfig wlp3s0 | grep ESSID | cut -f2 -d':' | sed -e 's/"//g'| sed -e 's/ //g'`"
+    if test "$ESSID" != "off/any" ; then
+        #ESSID="`/sbin/iwgetid |awk -F ":" '{print $2}'|sed -e 's/"//g'`"
         LINK="`awk 'NR==3 {print $3}' /proc/net/wireless |sed -e 's/\.//g'`"
         echo " $ESSID:$LINK  "
     else

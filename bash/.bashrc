@@ -7,7 +7,8 @@ if [ -f ~/.shrc ]; then
 fi
 
 #   Paths {{{
-PATH=$PATH:/sbin:/bin:/usr/sbin:/usr/opt/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/opt/bin:/usr/X11R6/bin:/usr/glocal/bin:$GOROOT/bin:$GOPATH/bin:$HOME/local/bin:
+PATH=$PATH:/sbin:/bin:/usr/sbin:/usr/opt/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/opt/bin:$HOME/local/bin:
+#PATH=$PATH:/sbin:/bin:/usr/sbin:/usr/opt/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/opt/bin:/usr/X11R6/bin:/usr/glocal/bin:$HOME/local/bin:$GOROOT/bin:$GOPATH/bin:
 #$HOME/documents/shell_skript/:$HOME/local/go/bin/:$HOME/local/bin/
 
 # set PATH so it includes user's private bin if it exists
@@ -79,7 +80,7 @@ function display() {
 	RC=$?
 	user=`whoami`; 
 	machine=`hostname`; 
-	if [[ $machine != arch || $user != frank ]]; then 
+	if [[ $machine != archPad || $user != frank ]]; then 
 		echo; 
 		echo \
 			"${GREEN}${BOLD}${user}${NORMAL}${BOLD}@${NORMAL}${RED}${BOLD}${machine}${NORMAL}";
