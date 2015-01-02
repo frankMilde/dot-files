@@ -22,15 +22,15 @@ export GOPATH=$HOME/go
 #export CPP_INCLUDE_PATH=$HOME/bin/boost_1_51_0_withStatic
 #export LD_LIBRARY_PATH=$HOME/bin/boost_1_51_0_withStatic/stage/lib:$LDLIBRARY_PATH
 #Latest:
-#export CPP_INCLUDE_PATH=$HOME/bin/boost_1_51_0/include
-#export LD_LIBRARY_PATH=$HOME/bin/boost_1_51_0/lib:$LDLIBRARY_PATH
+export CPP_INCLUDE_PATH=/usr/include/boost
+export LD_LIBRARY_PATH=/usr/lib:$LDLIBRARY_PATH
 
 #export CPP_INCLUDE_PATH=$HOME/bin/boost_1_54_0/include
 #export CPP_INCLUDE_PATH=$HOME/bin/boost_1_54_0/boost
 #export LD_LIBRARY_PATH=$HOME/bin/boost_1_54_0/libs:$LDLIBRARY_PATH
 #}}}
 
-#   locales and standart editors {{{
+#   locales and standard editors {{{
 BLOCKSIZE=K;    export BLOCKSIZE
 EDITOR=vim;     export EDITOR
 PAGER=more;     export PAGER
@@ -38,6 +38,20 @@ PAGER=more;     export PAGER
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
+#}}}
+
+#   gpg and gpg-agent {{{
+# http://wiki.adaptive.cs.unm.edu/support.html
+if [ -f "${HOME}/.gnupg/.gpg-agent-info" ]; then
+# 	ssh_sock_file=$(cat "$HOME/.gnupg/.gpg-agent-info"|grep "SSH_AUTH_SOCK"|sed 's/.*=//')
+# 	if [ -f "$ssh_sock_file" ];then
+		. "${HOME}/.gnupg/.gpg-agent-info"
+		export GPG_AGENT_INFO
+		export SSH_AUTH_SOCK
+# 	else
+# 		rm "$HOME/.gpg-agent-info"
+# 	fi
+fi
 
 GPG_TTY=$(tty)
 export GPG_TTY
@@ -99,8 +113,9 @@ export PS1="\[$YELLOW$BOLD\][\!]\[$NORMAL\]/\W:\$"
 
 #   history {{{
 unset HISTFILESIZE
-export HISTCONTROL=erasedups
-export HISTSIZE=10000
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+export HISTSIZE=100000
+export HISTFILESIZE=100000
 export HISTIGNORE="&:[ ]*:exit:?:??:vi"
 shopt -s histappend #append to history
 #}}}
@@ -151,6 +166,7 @@ alias grep='grep --color=auto'
 alias pgrep='pgrep --color=auto'
 alias mkdir='mkdir -pv'
 alias keyinput='od -c'
+alias uni='ssh frank@cusanus.physik.tu-berlin.de'
 #}}}
 
 #   bash programs {{{
@@ -158,7 +174,7 @@ alias vi='vim'
 alias vie='vim -c :e.'
 alias qstat='qstat -c | grep -A 2 frank'
 alias quota="quota -s 2>/dev/null|awk 'NR>3 {print \"usage    limit    free\"; print \$1/1000 \"G  \" \$2/1000 \"G  \" (\$2-\$1)/1000 \"G\"}'"
-#alias git='hub'
+alias git='hub'
 alias stow='stow -v'
 alias sgit=smartgithg
 alias tastatur='setxkbmap -model pc104 -layout us'
@@ -184,7 +200,7 @@ alias gpgusb-signwithGMX='gpg --no-default-keyring --secret-keyring /media/sdb1/
 #}}}
 
 #   files {{{
-alias important='vim ~/documents/important.txt'
+alias cmds='vim ~/documents/cheat-sheets/useful-commands.md'
 alias bashrc='vim ~/.bashrc'
 alias vimrc='vim ~/.vimrc'
 alias screenrc='vim ~/.screenrc'

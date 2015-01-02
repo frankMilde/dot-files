@@ -237,6 +237,9 @@ filetype plugin on
 " assume bashscript syntax highlighting for files with no extension
 autocmd BufNewFile,BufRead * if &ft == '' | set ft=sh | endif
 
+" assume bashscript syntax highlighting for files with no extension
+"autocmd BufNewFile,BufRead *.go set ft=go.cpp
+
 " gnuplot files
 autocmd BufNewFile,BufRead *.gnu set ft=gnuplot
 autocmd BufNewFile,BufRead *.plot set ft=gnuplot

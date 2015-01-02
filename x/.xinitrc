@@ -11,18 +11,18 @@ xmodmap -e "clear lock"
 xmodmap -e "keycode 66 = Escape"
 #xmodmap -e "keycode 0x42 = Escape" 
 
-#gpg-agent --daemon --enable-ssh-support \
-#	--write-env-file "${HOME}/.gnupg/.gpg-agent-info"
+gpg-agent --daemon --enable-ssh-support  --exit-with-session \
+	--write-env-file "${HOME}/.gnupg/.gpg-agent-info"
 
 ${HOME}/local/bin/st &
 firefox &
-#thunderbird &
+exec ${HOME}/${USER}/local/bin/use-thunderbird-with-gpg-agent.sh &
 
 wifi() {
-    #STATUS="X`/sbin/iwgetid`"
-    ESSID="`iwconfig wlp3s0 | grep ESSID | cut -f2 -d':' | sed -e 's/"//g'| sed -e 's/ //g'`"
-    if test "$ESSID" != "off/any" ; then
-        #ESSID="`/sbin/iwgetid |awk -F ":" '{print $2}'|sed -e 's/"//g'`"
+    STATUS="X`/sbin/iwgetid`"
+    if test "$STATUS" != "X" ; then
+        ESSID="`/sbin/iwgetid |awk -F ":" '{print $2}'|sed -e 's/"//g'`"
+>>>>>>> fe98c67750c6489882e284732701c6c6cb221d4a
         LINK="`awk 'NR==3 {print $3}' /proc/net/wireless |sed -e 's/\.//g'`"
         echo " $ESSID:$LINK  "
     else
@@ -73,7 +73,8 @@ cmusstats(){
 
 xset b 0 440 50 &  beep off
 
-while xsetroot -name "`cmusstats``volume``wifi``batt` `date '+%A, %d. %b %Y   %H:%M'`"
+#while xsetroot -name "`cmusstats``volume``wifi``batt` `date '+%A, %d. %b %Y   %H:%M'`"
+while xsetroot -name "`cmusstats``volume` `date '+%A, %d. %b %Y   %H:%M'`"
 do
 	sleep 1
 done &
