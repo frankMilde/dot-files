@@ -35,4 +35,7 @@
 ##    MANPATH=~/man:"${MANPATH}"; export MANPATH
 ##fi
 
+cd dot-files
+git pull origin master
+cd
 exec startx &

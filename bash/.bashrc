@@ -225,17 +225,33 @@ function scr {
 function usb() {
 	pmount -e /dev/sdb > /dev/null 2>&1
 	if [[ "$?" -ne 0 ]]; then
-		pmount -e /dev/sdb1
-		cd /media/sdb1
+		pmount -e /dev/sdb1 > /dev/null 2>&1
+		if [[ "$?" -ne 0 ]]; then
+			pmount -e /dev/sdd1 > /dev/null 2>&1
+			cd /media/sdd1
+		else
+			cd /media/sdb1
+		fi
 	else
 		cd /media/sdb
 	fi
 }
+
+function cam() {
+	usb
+	cd DCIM/100CANON/
+	rm *.THM
+	mc
+}
+
 function nousb() {
 	cd 
 	pumount /media/sdb > /dev/null 2>&1
 	if [[ "$?" -ne 0 ]]; then
 		pumount /media/sdb1
+		if [[ "$?" -ne 0 ]]; then
+			pumount /media/sdd1
+		fi
 	fi
 }
 function cdd(){
