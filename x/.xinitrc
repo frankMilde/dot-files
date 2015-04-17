@@ -98,8 +98,6 @@ exec ${HOME}/local/bin/dwm
 exit
 
 
-###
-
 #if test "`hostname`" == "archPad"; then
 #	while xsetroot -name "`cmusstats``wifi``batt``volume``date '+%A, %d. %b %Y   %H:%M'`"
 #	do
