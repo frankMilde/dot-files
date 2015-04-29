@@ -35,8 +35,9 @@
 ##    MANPATH=~/man:"${MANPATH}"; export MANPATH
 ##fi
 
-exec cd dot-files
-exec git pull origin master
+cd ~/dot-files
+git pull origin master
+cd
 
 if [ "$?" = "0" ]; then
 	exec startx &
@@ -45,7 +46,6 @@ else
 	exec startx &
 fi
 
-cd dot-files
+cd ~/dot-files
 git push origin master
-
-
+cd
