@@ -117,6 +117,8 @@ export HISTSIZE=100000
 export HISTFILESIZE=100000
 export HISTIGNORE="&:[ ]*:exit:?:??:vi"
 shopt -s histappend #append to history
+# After each command, save and reload history
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 #}}}
 
 # use vi style on command line {{{
@@ -148,7 +150,9 @@ stty erase "^?"
 #---------------------------------------------------------------------------
 #   bash command alias {{{
 alias c=clear
+alias x='vim ${HOME}/xkcd.txt.gpg'
 alias e=exit
+alias s='st &'
 alias h='history'
 alias bc='bc -l'
 alias df='df -H'
@@ -166,6 +170,7 @@ alias pgrep='pgrep --color=auto'
 alias mkdir='mkdir -pv'
 alias keyinput='od -c'
 alias uni='ssh frank@cusanus.physik.tu-berlin.de'
+alias pwgen='pwgen -s -y -n'
 #}}}
 
 #   bash programs {{{
@@ -196,6 +201,9 @@ alias thunderbird=use-thunderbird-with-gpg-agent.sh
 alias gpgusb='gpg --no-default-keyring --secret-keyring /media/sdb1/.gnupg/secring.gpg --keyring /home/frank/.gnupg/pubring.gpg '
 alias gpgusb-signwithTU='gpg --no-default-keyring --secret-keyring /media/sdb1/.gnupg/secring.gpg --keyring /home/frank/.gnupg/pubring.gpg --local-user 0xBC851EED5F288073 '
 alias gpgusb-signwithGMX='gpg --no-default-keyring --secret-keyring /media/sdb1/.gnupg/secring.gpg --keyring /home/frank/.gnupg/pubring.gpg --local-user 0x983A8842AB1B2ADD '
+alias 4on1='pdfjam --nup 2x2 --suffix 4on1 --outfile .'
+alias 2on1='pdfjam --nup 2x1 --landscape --suffix 2on1 --outfile .'
+alias cv='pdfjam cv.pdf 1-2 --outfile frank-milde_CV.pdf'
 #}}}
 
 #   files {{{

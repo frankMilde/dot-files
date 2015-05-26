@@ -12,3 +12,5 @@
 	tool = vimdiff
 [github]
     user = "frankMilde"
+[push]
+	default = matching

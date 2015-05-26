@@ -11,12 +11,12 @@ xmodmap -e "clear lock"
 xmodmap -e "keycode 66 = Escape"
 #xmodmap -e "keycode 0x42 = Escape" 
 
-gpg-agent --daemon --enable-ssh-support  --exit-with-session \
-	--write-env-file "${HOME}/.gnupg/.gpg-agent-info"
+# gpg-agent --daemon --enable-ssh-support  --exit-with-session \
+# 	--write-env-file "${HOME}/.gnupg/.gpg-agent-info"
 
 ${HOME}/local/bin/st &
 firefox &
-exec ${HOME}/${USER}/local/bin/use-thunderbird-with-gpg-agent.sh &
+exec ${HOME}/local/bin/use-thunderbird-with-gpg-agent.sh &
 
 wifi() {
     STATUS="X`/sbin/iwgetid`"

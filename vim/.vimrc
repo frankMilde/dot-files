@@ -808,6 +808,22 @@ function! Format()
 	exec "set expandtab"
 	exec "retab"
 endfunction
+
+function! SanatizeHtml()
+	:% s/ü/ue/
+	:% s/ö/oe/
+	:% s/ä/ae/
+	:% s/#/\\# /
+	:% s/&/\\& /
+	:% s/”/"/
+	:% s/“/"/
+	:% s/—/--/
+	:% s/‑/-/
+	:% s/–/--/
+	:% s/ --/ --/
+	:% s/-- /-- /
+	:% s/’/'/
+endfunction
 "}}}
 "=== un-impaired (bundle) === {{{
 NeoBundle 'tpope/vim-unimpaired'

@@ -11,9 +11,9 @@
 ##    source ~/.shrc
 ##fi
 #
-#if [ -f ~/.bashrc ]; then
-#    source ~/.bashrc
-#fi
+if [ -f ~/.bashrc ]; then
+    source ~/.bashrc
+fi
 #
 ## remove /usr/games and /usr/X11R6/bin if you want
 ##PATH=/sbin:/usr/opt/bin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:/usr/X11R6/bin:$HOME/bin:/usr/glocal/bin:/usr/kde/3.5/bin:~/local/dwm-5.7.2
@@ -35,4 +35,17 @@
 ##    MANPATH=~/man:"${MANPATH}"; export MANPATH
 ##fi
 
-exec startx &
+#   history {{{
+unset HISTFILESIZE
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+export HISTSIZE=100000
+export HISTFILESIZE=100000
+export HISTIGNORE="&:[ ]*:exit:?:??:vi"
+shopt -s histappend #append to history
+# After each command, save and reload history
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+#}}}
+
+if [ "$(tty)" = "/dev/tty1" ]; then
+	   startx
+	 fi
