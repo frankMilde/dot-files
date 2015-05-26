@@ -46,6 +46,21 @@ shopt -s histappend #append to history
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 #}}}
 
-if [ "$(tty)" = "/dev/tty1" ]; then
-	   startx
-	 fi
+cd ~/dot-files
+git pull origin master
+cd
+if [ "$?" = "0" ]; then
+	if [ "$(tty)" = "/dev/tty1" ]; then
+		startx
+	fi
+else
+	echo "Error in update... " 1>&2
+	sleep 2
+	if [ "$(tty)" = "/dev/tty1" ]; then
+		startx
+	fi
+fi
+
+cd ~/dot-files
+git push origin master
+cd

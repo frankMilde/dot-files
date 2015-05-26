@@ -7,7 +7,8 @@ if [ -f ~/.shrc ]; then
 fi
 
 #   Paths {{{
-PATH=$PATH:/sbin:/bin:/usr/sbin:/usr/opt/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/opt/bin:/usr/X11R6/bin:/usr/glocal/bin:$GOROOT/bin:$GOPATH/bin:$HOME/local/bin:
+PATH=$PATH:/sbin:/bin:/usr/sbin:/usr/opt/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/opt/bin:$HOME/local/bin:
+#PATH=$PATH:/sbin:/bin:/usr/sbin:/usr/opt/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/opt/bin:/usr/X11R6/bin:/usr/glocal/bin:$HOME/local/bin:$GOROOT/bin:$GOPATH/bin:
 #$HOME/documents/shell_skript/:$HOME/local/go/bin/:$HOME/local/bin/
 
 # set PATH so it includes user's private bin if it exists
@@ -93,7 +94,7 @@ function display() {
 	RC=$?
 	user=`whoami`; 
 	machine=`hostname`; 
-	if [[ $machine != arch || $user != frank ]]; then 
+	if [[ $machine != arch && $machine != archPad || $user != frank ]]; then 
 		echo; 
 		echo \
 			"${GREEN}${BOLD}${user}${NORMAL}${BOLD}@${NORMAL}${RED}${BOLD}${machine}${NORMAL}";
@@ -232,17 +233,33 @@ function scr {
 function usb() {
 	pmount -e /dev/sdb > /dev/null 2>&1
 	if [[ "$?" -ne 0 ]]; then
-		pmount -e /dev/sdb1
-		cd /media/sdb1
+		pmount -e /dev/sdb1 > /dev/null 2>&1
+		if [[ "$?" -ne 0 ]]; then
+			pmount -e /dev/sdd1 > /dev/null 2>&1
+			cd /media/sdd1
+		else
+			cd /media/sdb1
+		fi
 	else
 		cd /media/sdb
 	fi
 }
+
+function cam() {
+	usb
+	cd DCIM/100CANON/
+	rm *.THM
+	mc
+}
+
 function nousb() {
 	cd 
 	pumount /media/sdb > /dev/null 2>&1
 	if [[ "$?" -ne 0 ]]; then
 		pumount /media/sdb1
+		if [[ "$?" -ne 0 ]]; then
+			pumount /media/sdd1
+		fi
 	fi
 }
 function cdd(){
