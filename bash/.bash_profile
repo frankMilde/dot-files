@@ -46,16 +46,21 @@ shopt -s histappend #append to history
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 #}}}
 
+NORMAL=$(tput sgr0)
+RED=$(tput setaf 1)
+
 cd ~/dot-files
 git pull origin master
-cd
+
 if [ "$?" = "0" ]; then
+	cd
 	if [ "$(tty)" = "/dev/tty1" ]; then
 		startx
 	fi
 else
-	echo "Error in update... " 1>&2
-	sleep 2
+	echo "\n$RED  Error in git pull of dot-files...$NORMAL " 1>&2
+	sleep 5
+	cd
 	if [ "$(tty)" = "/dev/tty1" ]; then
 		startx
 	fi
@@ -63,4 +68,8 @@ fi
 
 cd ~/dot-files
 git push origin master
+if [ "$?" != "0" ]; then
+	echo "\n$RED  Error in git push of dot-files...$NORMAL " 1>&2
+	sleep 5
+fi
 cd
