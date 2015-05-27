@@ -203,6 +203,7 @@ alias gpgusb-signwithGMX='gpg --no-default-keyring --secret-keyring /media/sdb1/
 alias 4on1='pdfjam --nup 2x2 --suffix 4on1 --outfile .'
 alias 2on1='pdfjam --nup 2x1 --landscape --suffix 2on1 --outfile .'
 alias cv='pdfjam cv.pdf 1-2 --outfile frank-milde_CV.pdf'
+alias update='sudo pacman -Syu'		# Synchronize with repositories and then upgrade packages that are out of date on the local system.
 #}}}
 
 #   files {{{
