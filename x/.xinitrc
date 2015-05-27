@@ -13,7 +13,9 @@ xmodmap -e "keycode 66 = Escape"
 
 ${HOME}/local/bin/st &
 firefox &
-thunderbird &
+if test "`hostname`" != "archPad"; then
+	thunderbird &
+fi
 
 traffic() {
 	if test "`hostname`" == "archPad"; then
