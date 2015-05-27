@@ -9,7 +9,7 @@ xterm*VT100.geometry:103x25
 xterm*background: gray10
 xterm*foreground: gray80
 
-xterm*font: -*-courier-medium-r-*-*-14-*-*-*-*-*-iso8859-*
+xterm*font: -*-courier-medium-r-*-*-18-*-*-*-*-*-iso8859-*
 !xterm*font: -*-courier-medium-r-*-*-16*-*-*-*-*-iso8859-*
 xterm*font1: -*-*-*-*-*-*-2-*-*-*-*-*-*-*
 xterm*font2: -misc-fixed-*-r-normal-*-8-*-*-*-*-*-iso8859-*
@@ -38,7 +38,8 @@ xterm*multiClickTime: 250
 UXTerm*termName: xterm-256color
 
 st*antialias: true
-st*faceName: Menlo-Powerline	
+!st*faceName: Menlo-Powerline	
+st*faceName: Lat2-Terminus16
 st*faceSize: 9	
 st*internalBorder: 3
 st*loginShell: true

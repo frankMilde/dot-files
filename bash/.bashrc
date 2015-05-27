@@ -8,23 +8,15 @@ fi
 
 #   Paths {{{
 PATH=$PATH:/sbin:/bin:/usr/sbin:/usr/opt/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/opt/bin:$HOME/local/bin:
-#PATH=$PATH:/sbin:/bin:/usr/sbin:/usr/opt/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/opt/bin:/usr/X11R6/bin:/usr/glocal/bin:$HOME/local/bin:$GOROOT/bin:$GOPATH/bin:
-#$HOME/documents/shell_skript/:$HOME/local/go/bin/:$HOME/local/bin/
-
-# set PATH so it includes user's private bin if it exists
-#if [ -d ~/bin ] ; then
-#    PATH=~/bin:"${PATH}"
-#fi
 
 export PATH
 
-export GOPATH=$HOME/go
 #export CPP_INCLUDE_PATH=$HOME/bin/boost_1_51_0_withStatic
 #export LD_LIBRARY_PATH=$HOME/bin/boost_1_51_0_withStatic/stage/lib:$LDLIBRARY_PATH
 #Latest:
 export CPP_INCLUDE_PATH=/usr/include/boost
-export LD_LIBRARY_PATH=/usr/lib
-#export LD_LIBRARY_PATH=/usr/lib:$LDLIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/lib:$LDLIBRARY_PATH
+export GOPATH=$HOME/go
 
 #export CPP_INCLUDE_PATH=$HOME/bin/boost_1_54_0/include
 #export CPP_INCLUDE_PATH=$HOME/bin/boost_1_54_0/boost
@@ -41,7 +33,11 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 #}}}
 
-#   gpg and gpg-agent {{{
+if [ -f /etc/bash_completion ]; then
+ . /etc/bash_completion
+fi
+
+# gpg and ssh {{{
 # http://wiki.adaptive.cs.unm.edu/support.html
 if [ -f "${HOME}/.gnupg/.gpg-agent-info" ]; then
 # 	ssh_sock_file=$(cat "$HOME/.gnupg/.gpg-agent-info"|grep "SSH_AUTH_SOCK"|sed 's/.*=//')
@@ -49,6 +45,7 @@ if [ -f "${HOME}/.gnupg/.gpg-agent-info" ]; then
 		. "${HOME}/.gnupg/.gpg-agent-info"
 		export GPG_AGENT_INFO
 		export SSH_AUTH_SOCK
+		export SSH_AGENT_PID
 # 	else
 # 		rm "$HOME/.gpg-agent-info"
 # 	fi
@@ -56,11 +53,11 @@ fi
 
 GPG_TTY=$(tty)
 export GPG_TTY
-#}}}
 
-if [ -f /etc/bash_completion ]; then
- . /etc/bash_completion
-fi
+# http://support.gpgtools.org/kb/faq/how-to-enter-your-passphrase-directly-in-the-terminal
+#export PINENTRY_USER_DATA="USE_CURSES=1"
+#unset SSH_ASKPASS
+#}}}
 
 # Learn something new, each time you open a shell
 #echo "Did you know that:"; whatis $(ls /bin | shuf | head -1)
@@ -95,7 +92,7 @@ function display() {
 	RC=$?
 	user=`whoami`; 
 	machine=`hostname`; 
-	if [[ $machine != archPad || $user != frank ]]; then 
+	if [[ $machine != arch && $machine != archPad || $user != frank ]]; then 
 		echo; 
 		echo \
 			"${GREEN}${BOLD}${user}${NORMAL}${BOLD}@${NORMAL}${RED}${BOLD}${machine}${NORMAL}";
@@ -119,6 +116,8 @@ export HISTSIZE=100000
 export HISTFILESIZE=100000
 export HISTIGNORE="&:[ ]*:exit:?:??:vi"
 shopt -s histappend #append to history
+# After each command, save and reload history
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 #}}}
 
 # use vi style on command line {{{
@@ -150,7 +149,9 @@ stty erase "^?"
 #---------------------------------------------------------------------------
 #   bash command alias {{{
 alias c=clear
+alias x='vim ${HOME}/xkcd.txt.gpg'
 alias e=exit
+alias s='st &'
 alias h='history'
 alias bc='bc -l'
 alias df='df -H'
@@ -168,6 +169,7 @@ alias pgrep='pgrep --color=auto'
 alias mkdir='mkdir -pv'
 alias keyinput='od -c'
 alias uni='ssh frank@cusanus.physik.tu-berlin.de'
+alias pwgen='pwgen -s -y -n'
 #}}}
 
 #   bash programs {{{
@@ -198,6 +200,9 @@ alias thunderbird=use-thunderbird-with-gpg-agent.sh
 alias gpgusb='gpg --no-default-keyring --secret-keyring /media/sdb1/.gnupg/secring.gpg --keyring /home/frank/.gnupg/pubring.gpg '
 alias gpgusb-signwithTU='gpg --no-default-keyring --secret-keyring /media/sdb1/.gnupg/secring.gpg --keyring /home/frank/.gnupg/pubring.gpg --local-user 0xBC851EED5F288073 '
 alias gpgusb-signwithGMX='gpg --no-default-keyring --secret-keyring /media/sdb1/.gnupg/secring.gpg --keyring /home/frank/.gnupg/pubring.gpg --local-user 0x983A8842AB1B2ADD '
+alias 4on1='pdfjam --nup 2x2 --suffix 4on1 --outfile .'
+alias 2on1='pdfjam --nup 2x1 --landscape --suffix 2on1 --outfile .'
+alias cv='pdfjam cv.pdf 1-2 --outfile frank-milde_CV.pdf'
 alias update='sudo pacman -Syu'
 #}}}
 
