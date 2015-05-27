@@ -109,5 +109,4 @@ else
 fi
 
 exec ${HOME}/local/bin/dwm
-
 exit
