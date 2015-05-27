@@ -279,9 +279,9 @@ let g:netrw_preview=1      " preview window shown in a vertically split
 let g:netrw_winsize=20		 " when you preview the new file takes up 80% and the file explorer the other 20%
 "}}}
 "=== folds === {{{
-set foldmethod=marker " this lets us put the marker in the file so that it can be shared across and stored in version control.
+"set foldmethod=marker " this lets us put the marker in the file so that it can be shared across and stored in version control.
 set foldmarker={,}    " this lets us put the marker in the file so that it can be shared across and stored in version control.
-"set foldmethod=syntax " uses syntax for folding
+set foldmethod=syntax " uses syntax for folding
 "set foldmethod=indent " uses indendt for folding
 set foldlevel=0       " default fold level, all open, set it 200 or something to make it all closed.
 "}}}

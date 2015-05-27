@@ -39,6 +39,8 @@ cd ~/dot-files
 git pull origin master
 cd
 
+echo check 1
+
 if [ "$?" = "0" ]; then
 	exec startx &
 else
@@ -46,6 +48,8 @@ else
 	exec startx &
 fi
 
+echo check 2
 cd ~/dot-files
 git push origin master
 cd
+echo check 3

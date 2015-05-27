@@ -23,7 +23,8 @@ export GOPATH=$HOME/go
 #export LD_LIBRARY_PATH=$HOME/bin/boost_1_51_0_withStatic/stage/lib:$LDLIBRARY_PATH
 #Latest:
 export CPP_INCLUDE_PATH=/usr/include/boost
-export LD_LIBRARY_PATH=/usr/lib:$LDLIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/lib
+#export LD_LIBRARY_PATH=/usr/lib:$LDLIBRARY_PATH
 
 #export CPP_INCLUDE_PATH=$HOME/bin/boost_1_54_0/include
 #export CPP_INCLUDE_PATH=$HOME/bin/boost_1_54_0/boost
@@ -197,6 +198,7 @@ alias thunderbird=use-thunderbird-with-gpg-agent.sh
 alias gpgusb='gpg --no-default-keyring --secret-keyring /media/sdb1/.gnupg/secring.gpg --keyring /home/frank/.gnupg/pubring.gpg '
 alias gpgusb-signwithTU='gpg --no-default-keyring --secret-keyring /media/sdb1/.gnupg/secring.gpg --keyring /home/frank/.gnupg/pubring.gpg --local-user 0xBC851EED5F288073 '
 alias gpgusb-signwithGMX='gpg --no-default-keyring --secret-keyring /media/sdb1/.gnupg/secring.gpg --keyring /home/frank/.gnupg/pubring.gpg --local-user 0x983A8842AB1B2ADD '
+alias update='sudo pacman -Syu'
 #}}}
 
 #   files {{{
