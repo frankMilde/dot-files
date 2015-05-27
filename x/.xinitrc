@@ -11,20 +11,17 @@ xmodmap -e "clear lock"
 xmodmap -e "keycode 66 = Escape"
 #xmodmap -e "keycode 0x42 = Escape" 
 
-# gpg-agent --daemon --enable-ssh-support  --exit-with-session \
-# 	--write-env-file "${HOME}/.gnupg/.gpg-agent-info"
-
 ${HOME}/local/bin/st &
 firefox &
-exec ${HOME}/local/bin/use-thunderbird-with-gpg-agent.sh &
+thunderbird &
 
-wifi() {
-    STATUS="X`/sbin/iwgetid`"
-    if test "$STATUS" != "X" ; then
-        ESSID="`/sbin/iwgetid |awk -F ":" '{print $2}'|sed -e 's/"//g'`"
-        LINK="`awk 'NR==3 {print $3}' /proc/net/wireless |sed -e 's/\.//g'`"
-				INTERFACE="`/sbin/iwgetid |awk '{print $1}'`"
-
+traffic() {
+	if test "`hostname`" == "archPad"; then
+		#INTERFACE="`/sbin/iwgetid |awk '{print $1}'`"
+		INTERFACE="`ls /sys/class/net | tail -1`"
+	else 
+		INTERFACE="`ls /sys/class/net | head -1`"
+	fi
 				DNLOAD_1="`cat /proc/net/dev | grep $INTERFACE | awk '{print $2 }'`"
 				UPLOAD_1="`cat /proc/net/dev | grep $INTERFACE | awk '{print $10}'`"
 				sleep 1
@@ -37,7 +34,15 @@ wifi() {
 				KBIT_DL=$(echo "$DNLOAD / 1024" | bc)
 				KBIT_UL=$(echo "$UPLOAD / 1024" | bc)
 				#echo "☳ $ESSID:$LINK ▼$DNLOAD ▲$UPLAOD"
-				echo "D $KBIT_DL kb/s U $KBIT_UL kb/s  |  $ESSID:$LINK  |  "
+				echo "D $KBIT_DL kb/s U $KBIT_UL kb/s  |  "
+}
+wifi() {
+    STATUS="X`/sbin/iwgetid`"
+    if test "$STATUS" != "X" ; then
+        ESSID="`/sbin/iwgetid |awk -F ":" '{print $2}'|sed -e 's/"//g'`"
+        LINK="`awk 'NR==3 {print $3}' /proc/net/wireless |sed -e 's/\.//g'`"
+				#echo "☳ $ESSID:$LINK ▼$DNLOAD ▲$UPLAOD"
+				echo "$ESSID:$LINK  |  "
 			else
 				echo "No wifi | "
 			fi
@@ -89,18 +94,13 @@ cmusstats(){
 
 xset b 0 440 50 &  beep off
 
-#while xsetroot -name "`cmusstats``wifi``batt``volume``date '+%A, %d. %b %Y   %H:%M'`"
-#do
-#	sleep 1
-#done &
-
 if test "`hostname`" == "archPad"; then
-	while xsetroot -name "`cmusstats``wifi``batt``volume``date '+%a, %d. %b   %H:%M'`"
+	while xsetroot -name "`cmusstats``wifi``traffic``batt``volume``date '+%a, %d. %b   %H:%M'`"
 	do
 		sleep 1
 	done &
 else
-	while xsetroot -name "`cmusstats``wifi``volume``date '+%a, %d. %b   %H:%M'`"
+	while xsetroot -name "`cmusstats``traffic``volume``date '+%a, %d. %b   %H:%M'`"
 	do
 		sleep 1
 	done &

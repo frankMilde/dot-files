@@ -8,22 +8,15 @@ fi
 
 #   Paths {{{
 PATH=$PATH:/sbin:/bin:/usr/sbin:/usr/opt/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/opt/bin:$HOME/local/bin:
-#PATH=$PATH:/sbin:/bin:/usr/sbin:/usr/opt/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/opt/bin:/usr/X11R6/bin:/usr/glocal/bin:$HOME/local/bin:$GOROOT/bin:$GOPATH/bin:
-#$HOME/documents/shell_skript/:$HOME/local/go/bin/:$HOME/local/bin/
-
-# set PATH so it includes user's private bin if it exists
-#if [ -d ~/bin ] ; then
-#    PATH=~/bin:"${PATH}"
-#fi
 
 export PATH
 
-export GOPATH=$HOME/go
 #export CPP_INCLUDE_PATH=$HOME/bin/boost_1_51_0_withStatic
 #export LD_LIBRARY_PATH=$HOME/bin/boost_1_51_0_withStatic/stage/lib:$LDLIBRARY_PATH
 #Latest:
 export CPP_INCLUDE_PATH=/usr/include/boost
 export LD_LIBRARY_PATH=/usr/lib:$LDLIBRARY_PATH
+export GOPATH=$HOME/go
 
 #export CPP_INCLUDE_PATH=$HOME/bin/boost_1_54_0/include
 #export CPP_INCLUDE_PATH=$HOME/bin/boost_1_54_0/boost
@@ -40,7 +33,11 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 #}}}
 
-#   gpg and gpg-agent {{{
+if [ -f /etc/bash_completion ]; then
+ . /etc/bash_completion
+fi
+
+# gpg and ssh {{{
 # http://wiki.adaptive.cs.unm.edu/support.html
 if [ -f "${HOME}/.gnupg/.gpg-agent-info" ]; then
 # 	ssh_sock_file=$(cat "$HOME/.gnupg/.gpg-agent-info"|grep "SSH_AUTH_SOCK"|sed 's/.*=//')
@@ -48,6 +45,7 @@ if [ -f "${HOME}/.gnupg/.gpg-agent-info" ]; then
 		. "${HOME}/.gnupg/.gpg-agent-info"
 		export GPG_AGENT_INFO
 		export SSH_AUTH_SOCK
+		export SSH_AGENT_PID
 # 	else
 # 		rm "$HOME/.gpg-agent-info"
 # 	fi
@@ -55,11 +53,11 @@ fi
 
 GPG_TTY=$(tty)
 export GPG_TTY
-#}}}
 
-if [ -f /etc/bash_completion ]; then
- . /etc/bash_completion
-fi
+# http://support.gpgtools.org/kb/faq/how-to-enter-your-passphrase-directly-in-the-terminal
+#export PINENTRY_USER_DATA="USE_CURSES=1"
+#unset SSH_ASKPASS
+#}}}
 
 # Learn something new, each time you open a shell
 #echo "Did you know that:"; whatis $(ls /bin | shuf | head -1)
