@@ -11,7 +11,7 @@ xmodmap -e "clear lock"
 xmodmap -e "keycode 66 = Escape"
 #xmodmap -e "keycode 0x42 = Escape" 
 
-${HOME}/local/bin/st &
+${HOME}/local/bin/st -e  ${HOME}/local/bin/startup-check-arch-updates.sh &&
 firefox &
 if test "`hostname`" != "archPad"; then
 	thunderbird &

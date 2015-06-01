@@ -170,6 +170,7 @@ alias mkdir='mkdir -pv'
 alias keyinput='od -c'
 alias uni='ssh frank@cusanus.physik.tu-berlin.de'
 alias pwgen='pwgen -s -y -n'
+alias ff='killall firefox && tor-browser-en &'
 #}}}
 
 #   bash programs {{{
@@ -193,17 +194,24 @@ alias killvnc='vncserver -kill :1'
 #   wrapper {{{
 alias rm='rm-wrapper.sh' 
 alias mc='. ~/local/bin/mc-wrapper.sh'
-alias zippen="zippen.sh"
-alias open="open.sh"
-alias thunderbird=use-thunderbird-with-gpg-agent.sh
+#alias mc='mc-wrapper.sh'
+#alias zippen="zippen.sh"
+#alias open="open.sh"
+#alias thunderbird=use-thunderbird-with-gpg-agent.sh
 #alias make=colormake
+
 alias gpgusb='gpg --no-default-keyring --secret-keyring /media/sdb1/.gnupg/secring.gpg --keyring /home/frank/.gnupg/pubring.gpg '
 alias gpgusb-signwithTU='gpg --no-default-keyring --secret-keyring /media/sdb1/.gnupg/secring.gpg --keyring /home/frank/.gnupg/pubring.gpg --local-user 0xBC851EED5F288073 '
 alias gpgusb-signwithGMX='gpg --no-default-keyring --secret-keyring /media/sdb1/.gnupg/secring.gpg --keyring /home/frank/.gnupg/pubring.gpg --local-user 0x983A8842AB1B2ADD '
+
 alias 4on1='pdfjam --nup 2x2 --suffix 4on1 --outfile .'
 alias 2on1='pdfjam --nup 2x1 --landscape --suffix 2on1 --outfile .'
 alias cv='pdfjam cv.pdf 1-2 --outfile frank-milde_CV.pdf'
+
 alias update='sudo pacman -Syu'		# Synchronize with repositories and then upgrade packages that are out of date on the local system.
+
+alias wifi='iwconfig-wrapper.sh -s'
+alias connect='iwconfig-wrapper.sh -c'
 #}}}
 
 #   files {{{
