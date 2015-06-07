@@ -153,7 +153,6 @@ alias x='vim ${HOME}/xkcd.txt.gpg'
 alias e=exit
 alias s='st &'
 alias h='history'
-alias bc='bc -l'
 alias df='df -H'
 alias du='du -ch'
 alias ps='ps auxww|less'
@@ -280,5 +279,20 @@ function v(){
 function pass() {
 	usb
 	v xk
+}
+# use as `duf *` to get all dirs and files
+function duf {
+/bin/du -sk "$@" | sort -n | \
+	while read size fname
+	do 
+		for unit in k M G T P E Z Y 
+		do 
+			if [ $size -lt 1024 ]; then
+				echo -e "${size}${unit}\t${fname}" 
+				break
+			fi
+			size=$((size/1024)) 
+		done 
+	done
 }
 #}}}
