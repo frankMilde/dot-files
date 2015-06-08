@@ -90,7 +90,7 @@ cmusstats(){
 	fi
 }
 disk(){
-	echo "Use $(df -h | awk '/\/$/ {print $5}')  |  "
+	echo "Disk $(df -h | awk '/\/$/ {print $5}')  |  "
 }
 
 xset b 0 440 50 &  beep off
