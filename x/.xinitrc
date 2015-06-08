@@ -70,7 +70,8 @@ batt() {
 	fi
 }
 volume(){
-	echo "♫ `/usr/bin/amixer get Master Playback Volume |awk '/Mono:/ {print $4}' | sed -e 's/\[//g'|sed -e 's/%\]//g'`  |  "
+	echo "♫ $(/usr/bin/amixer get Master Playback Volume | \
+		awk '/Mono:/ {print $4}' | sed -e 's/\[//g'|sed -e 's/%\]//g')  |  "
 }
 cmusstats(){
 	if test "X`pgrep cmus`" != "X" ; then 
@@ -88,16 +89,19 @@ cmusstats(){
 		echo "$ARTIST - $TITLE [$RESTMIN:$RESTSEC/$MIN:$SEC] | "
 	fi
 }
+disk(){
+	echo "Use $(df -h | awk '/\/$/ {print $5}')  |  "
+}
 
 xset b 0 440 50 &  beep off
 
 if test "`hostname`" == "archPad"; then
-	while xsetroot -name "`cmusstats``wifi``traffic``batt``volume``date '+%a, %d. %b   %H:%M'`"
+	while xsetroot -name "`cmusstats``wifi``traffic``disk``batt``volume``date '+%a, %d. %b   %H:%M'`"
 	do
 		sleep 1
 	done &
 else
-	while xsetroot -name "`cmusstats``traffic``volume``date '+%a, %d. %b   %H:%M'`"
+	while xsetroot -name "`cmusstats``traffic``disk``volume``date '+%a, %d. %b   %H:%M'`"
 	do
 		sleep 1
 	done &
