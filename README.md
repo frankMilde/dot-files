@@ -7,7 +7,8 @@ set up. Just clone this repo and run
     $ stow bash
     $ stow vim
 
-to install, for example, the bashrcs and .vim files into your home directory.
+to install, for example, the `.bashrc`, `.bash_profile`, `.bash_logout` and
+`.vim` files into your home directory.
 
 For more on how to handle your dot files with [GNU
 stow](http://www.gnu.org/software/stow/) see this nice
