@@ -16,6 +16,7 @@ if test "`hostname`" != "archPad"; then
 	thunderbird &
 fi
 ${HOME}/local/bin/st -e  ${HOME}/local/bin/startup-check-arch-updates.sh &
+${HOME}/local/bin/st -e  ${HOME}/local/bin/startup-gc4.sh
 
 traffic() {
 	if test "`hostname`" == "archPad"; then
